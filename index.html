@@ -2,7 +2,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Ljuda – Lär dig läsa och ljuda ord | Lär Appar</title>
-<meta name="description" content="Hjälp ditt barn att lära sig läsa med Ljuda. Öva svenska bokstavsljud och enkla ord i en pedagogisk app utan reklam. Engångsköp för 29 kr.">
+<meta name="description" content="Lär ditt barn att läsa med Ljuda. Träna svenska bokstavsljud, ljudning och enkla ord i barnets takt. Utan reklam eller abonnemang. 29 kr.">
+  <link rel="canonical" href="https://larappar.se/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:title" content="Ljuda – lär barn läsa med bokstavsljud | Lär Appar">
+  <meta property="og:description" content="Öva bokstavsljud och ljudning med Ljuda. En enkel svensk läsapp för barn, utan reklam eller abonnemang.">
+  <meta property="og:url" content="https://larappar.se/">
   <style>
     :root{
       --bg:#fff;
@@ -70,6 +76,14 @@
     .principles span{display:block;color:var(--muted);font-weight:400;margin-top:6px;line-height:1.45}
     footer{border-top:1px solid var(--line);padding:28px 0 44px;color:var(--muted);font-size:14px}
     .footerlinks{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
+    .sociallinks{display:flex;align-items:center;gap:12px;margin-top:18px}
+    .sociallinks a{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border:1px solid var(--line);border-radius:12px;color:var(--fg);text-decoration:none}
+    .sociallinks a:hover,.sociallinks a:focus-visible{background:var(--soft);outline-offset:3px}
+    .sociallinks svg{width:21px;height:21px;fill:currentColor}
+    .reading-guide{max-width:760px}
+    .reading-guide p,.reading-guide li{font-size:17px;line-height:1.65;color:var(--muted)}
+    .reading-guide h3{font-size:23px;letter-spacing:-.02em;margin:28px 0 10px}
+    .reading-guide ul{padding-left:22px}
     .footerlinks button{border:0;background:none;padding:0;color:var(--muted);text-decoration:underline;cursor:pointer}
     dialog{
       border:0;border-radius:20px;max-width:520px;width:calc(100% - 32px);padding:0;
@@ -102,6 +116,57 @@
   font-weight:700;
 }
 .buybutton:hover{opacity:.82}
+
+    /* Sociala medier i sidhuvudet, i nivå med Lär Appar. */
+    header{gap:20px}
+    header nav{margin-left:auto}
+    .header-social{margin:0 0 0 10px;flex-shrink:0;gap:8px}
+    .header-social a{width:38px;height:38px}
+    .download-title{font-size:19px;font-weight:600;margin:0 0 12px}
+    .download-title strong{font-weight:800}
+    @media(max-width:700px){
+      header{justify-content:space-between}
+      .header-social{margin-left:auto}
+      .header-social a{width:38px;height:38px}
+      .download-title{font-size:17px;margin-bottom:10px}
+    }
+    /* Kompakt startsida: köp och sociala länkar ovanför vikningen. */
+    header{padding:14px 0}
+    .hero{padding:32px 0 30px}
+    .hero .eyebrow{font-size:12px;margin-bottom:8px}
+    .hero h1{font-size:clamp(38px,6vw,62px);line-height:1.02;max-width:760px;margin-bottom:16px}
+    .hero-description{max-width:610px;margin:0 auto 16px;color:var(--muted);font-size:17px;line-height:1.4}
+    .hero-actions .btn{min-height:46px;padding:11px 18px}
+    .hero-price{margin:9px 0 0}
+    .hero-social{margin:10px 0 0}
+    @media(max-height:800px) and (min-width:701px){
+      .hero{padding:24px 0}
+      .hero h1{font-size:clamp(36px,5vw,56px);margin-bottom:12px}
+      .hero-description{font-size:16px;margin-bottom:14px}
+    }
+    /* Viktigaste länkarna syns direkt även på mobilen. */
+    .hero-description{max-width:610px;margin:0 auto 20px;color:var(--muted);font-size:18px;line-height:1.5}
+    .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .hero-actions .btn{min-width:148px}
+    .hero-price{font-size:13px;color:var(--muted);margin:12px 0 0}
+    .hero-social{justify-content:center;margin:16px 0 0}
+    @media(max-width:700px){
+      header{padding:15px 0}
+      .hero{padding:22px 0 22px}
+      .hero h1{font-size:clamp(32px,8.3vw,44px);line-height:1.04;margin-bottom:12px}
+      .hero-description{font-size:14px;line-height:1.35;margin-bottom:13px}
+      .hero-actions{gap:9px;flex-wrap:nowrap}
+      .hero-actions .btn{min-width:0;flex:1;padding:12px 8px;font-size:14px;min-height:46px}
+      .hero-social{margin-top:9px}
+      .hero-social a{width:40px;height:40px}
+    }
+    @media(max-height:650px) and (max-width:700px){
+      .hero{padding:18px 0 22px}
+      .hero h1{font-size:34px;margin-bottom:10px}
+      .hero-description{margin-bottom:12px}
+      .hero-price{margin-top:8px}
+      .hero-social{margin-top:8px}
+    }
 </style>
 <style>
 footer a{color:inherit}
@@ -113,9 +178,18 @@ footer a{color:inherit}
       <div class="brand">Lär Appar</div>
       <nav>
         <a href="#appar">Appar</a>
+        <a href="#lasinlarning">Lära sig läsa</a>
         <a href="#varfor">Varför så enkelt?</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
+      <div class="sociallinks header-social" aria-label="Lär Appar på sociala medier">
+        <a href="https://www.facebook.com/profile.php?id=61595076188989" target="_blank" rel="noopener noreferrer" aria-label="Lär Appar på Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/larappar/" target="_blank" rel="noopener noreferrer" aria-label="Lär Appar på Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.5-2.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+        </a>
+      </div>
     </header>
 
     <main>
@@ -123,7 +197,13 @@ footer a{color:inherit}
         <div>
           <div class="eyebrow">Lär Appar</div>
           <h1>Hjälp ditt barn att<br>knäcka läskoden.</h1>
-          <p>Lär dig bokstavsljud och att ljuda svenska ord.<br>En enkel app för barn som börjar lära sig läsa – <br>utan reklam eller distraktioner.</p>
+          <p class="hero-description">Lär dig bokstavsljud och att ljuda svenska ord.<br>En enkel app för barn som börjar lära sig läsa – utan reklam eller distraktioner.</p>
+          <div class="download-title">Ladda ner <strong>Ljuda</strong></div>
+          <div class="hero-actions" aria-label="Ladda ner appen Ljuda">
+            <a class="btn" href="https://apps.apple.com/se/app/ljuda/id6814141249">App Store</a>
+            <a class="btn secondary" href="https://play.google.com/store/apps/details?id=se.ljuda.app">Google Play</a>
+          </div>
+          <p class="hero-price">Ljuda · 29 kr · Engångsköp</p>
         </div>
       </section>
 
@@ -161,6 +241,23 @@ footer a{color:inherit}
          style="width:220px;max-width:70%;height:auto;border-radius:16px">
   </div>
 </section>
+      <section id="lasinlarning" aria-labelledby="lasinlarning-rubrik">
+        <div class="reading-guide">
+          <h2 id="lasinlarning-rubrik">Lära barn läsa med bokstavsljud</h2>
+          <p>När barn börjar läsa är ett viktigt steg att förstå att bokstäver representerar språkljud. Genom att öva på <strong>bokstavsljud</strong> och sätta ihop ljuden kan barnet börja läsa enkla ord. Det brukar kallas att <strong>ljuda</strong>.</p>
+          <h3>Vad är skillnaden mellan bokstavsnamn och bokstavsljud?</h3>
+          <p>Bokstaven M heter ”em”, men när vi läser ord använder vi ljudet /m/. Barnet behöver känna igen ljuden för att kunna sätta ihop exempelvis /s/–/o/–/l/ till ordet ”sol”.</p>
+          <h3>Tre enkla sätt att öva hemma</h3>
+          <ul>
+            <li><strong>Börja med några få ljud.</strong> Öva på att känna igen och säga ljuden, utan att skynda vidare.</li>
+            <li><strong>Sätt ihop korta ord.</strong> Prova exempelvis ”sol”, ”ros” och ”ram”. Säg ljuden långsamt och låt barnet försöka höra ordet.</li>
+            <li><strong>Öva kort och ofta.</strong> Några minuter i lugn och ro kan vara mer lockande än ett långt övningspass. Anpassa efter barnets intresse.</li>
+          </ul>
+          <h3>Öva bokstavsljud i appen Ljuda</h3>
+          <p>Ljuda är en svensk app där barnet kan träna enskilda bokstavsljud och gå vidare till enkla ord i sin egen takt. Appen är avskalad och innehåller varken reklam eller abonnemang.</p>
+          <p><a href="#appar">Se Ljuda och välj appbutik</a>.</p>
+        </div>
+      </section>
       <section id="varfor">
         <h2>Varför så enkelt?</h2>
         <div class="principles">
@@ -177,6 +274,14 @@ footer a{color:inherit}
       <a href="mailto:lar.appar@gmail.com">lar.appar@gmail.com</a>
       <div class="footerlinks">
         <a href="/integritet/ljuda/">Integritetspolicy för Ljuda</a>
+      </div>
+      <div class="sociallinks" aria-label="Lär Appar på sociala medier">
+        <a href="https://www.facebook.com/profile.php?id=61595076188989" target="_blank" rel="noopener noreferrer" aria-label="Lär Appar på Facebook" title="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/larappar/" target="_blank" rel="noopener noreferrer" aria-label="Lär Appar på Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.5-2.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/></svg>
+        </a>
       </div>
     </footer>
   </div>
